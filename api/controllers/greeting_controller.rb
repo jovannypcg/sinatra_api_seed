@@ -8,10 +8,12 @@ class GreetingController
     }.to_json
   end
 
-  def create
+  def create(request)
+    body = JSON.parse request.body.read
+
     Greet.create!({
-      sender: 'Jovanny',
-      receiver: 'Pablo'
+      sender: body['sender'],
+      receiver: body['receiver']
       })
   end
 end

@@ -8,7 +8,7 @@ module Sinatra
         greeting_controller = GreetingController.new
 
         show_greeting = -> { greeting_controller.index }
-        create_greeting = -> { greeting_controller.create }
+        create_greeting = -> { greeting_controller.create(request) }
 
         app.get '/greets', &show_greeting
         app.post '/greets', &create_greeting
