@@ -1,0 +1,5 @@
+production:
+  port: 5000
+
+development:
+  port: 3000
