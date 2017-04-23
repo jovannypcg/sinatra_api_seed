@@ -6,3 +6,5 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'json'
 gem 'rspec'
+
+gem 'mongoid', '~> 6.1.0'

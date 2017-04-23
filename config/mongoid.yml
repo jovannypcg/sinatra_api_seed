@@ -1,0 +1,30 @@
+development:
+  clients:
+    default:
+      database: seed_dev
+      hosts:
+        - localhost:27017
+      options:
+        consistency: strong
+
+production:
+  clients:
+    default:
+      database: seed_prod
+      hosts:
+        - localhost:27017
+      options:
+        consistency: strong
+        safe: true
+
+# production:
+#   sessions:
+#     default:
+#       uri: <%= ENV['MONGOHQ_URL'] %>
+#     username: <%= ENV['MONGOHQ_USERNAME'] %>
+#     password: <%= ENV['MONGOHQ_PASSWORD'] %>
+#     database: sample_app_production
+#     options:
+#       skip_version_check: true
+#       safe: true
+#       consistency: strong
